@@ -23,7 +23,16 @@ export default function MainVisual() {
 
 	return (
 		<div className={styles.mainVisual}>
-			<h2>あなたの成長を加速させる.</h2>
+			<div className={styles.mainVisualText}>
+				<h2 className={styles.mainVisualTextTitle}>
+					毎週、月火木の
+					<br />
+					放課後活動中！！！
+				</h2>
+				<p className={styles.mainVisualTextLink}>
+					<a href="https://w2c-form-sable.vercel.app/">入部はこちらから</a>
+				</p>
+			</div>
 			<Header isSticky={isSticky} setHeaderHeight={setHeaderHeight} />
 		</div>
 	);

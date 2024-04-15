@@ -117,7 +117,7 @@ const membersByGrade = {
 			field: "engineer",
 			hobby: "ダーツ",
 			message: "一緒に作品作って成長しましょう^^*",
-			image: "ymatsuoka.jpg",
+			image: "ymatsuoka.jpeg",
 		},
 	],
 };

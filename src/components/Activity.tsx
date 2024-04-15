@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "@/styles/components/details.module.scss";
+import styles from "@/styles/components/activity.module.scss";
 import SectionTitle from "@/components/SectionTitle";
 
 export default function Activity() {

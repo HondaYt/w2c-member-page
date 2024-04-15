@@ -50,6 +50,10 @@ export default function Header(props: HeaderProps) {
 							作品紹介<span>Works</span>
 						</a>
 					</li>
+
+					<p className={styles.formLink}>
+						<a href="https://w2c-form-sable.vercel.app/">入部はこちら</a>
+					</p>
 				</ul>
 			</nav>
 		</div>

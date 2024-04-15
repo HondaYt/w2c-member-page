@@ -1,0 +1,52 @@
+.activityDays {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    padding: 0 64px;
+
+    .day {
+        width: 200px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.2rem;
+        font-size: 4rem;
+        font-weight: 700;
+        color: #000;
+    }
+
+    .activeDay {
+        color: #fff;
+        // background: #fff;
+        background: linear-gradient(135deg, #d61717 0%, #ff6b00 100%); // 例として緑色を指定
+        box-shadow: 0 2px 8px #00000020;
+    }
+}
+
+.activityTime {
+    .time {
+        text-align: center;
+        font-size: 2.4rem;
+    }
+
+    .pie {
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+    }
+
+    .pie span {
+        position: absolute;
+        top: 50%;
+        right: 50px;
+        transform: translateY(-50%);
+        color: #fff;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+}

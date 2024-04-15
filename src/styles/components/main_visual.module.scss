@@ -1,0 +1,20 @@
+.mainVisual {
+    width: 100%;
+    height: 100vh;
+    background: url(/assets/mainVisual.jpg) no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+
+    h2 {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 4rem;
+        color: #fff;
+        text-align: center;
+    }
+}

@@ -1,0 +1,31 @@
+:root {
+    --color-primary: #d61717;
+    --text-color: #333333;
+    --text-color-rgb: 51, 51, 51;
+    --color-engineer: #17a8d6;
+    --color-designer: #d67e17;
+    --color-director: #59c107;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Inter", "Noto Sans JP", "Helvetica Neue", Arial,
+        "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    font-weight: 400;
+    font-feature-settings: "palt";
+    font-kerning: 300;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    transition-timing-function: ease-in-out;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-weight: 400;
+}
+
+li {
+    list-style: none;
+}

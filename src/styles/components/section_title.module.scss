@@ -1,0 +1,21 @@
+.sectionTitle {
+    h2 {
+        position: relative;
+        color: var(--text-color);
+        font-size: 6rem;
+        text-align: center;
+        margin-top: 20rem;
+        margin-bottom: 3rem;
+
+        span {
+            bottom: -3rem;
+            // left: -4rem;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            text-align: center;
+            opacity: 0.05;
+            font-size: 16rem;
+        }
+    }
+}

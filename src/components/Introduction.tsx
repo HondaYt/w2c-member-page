@@ -1,5 +1,5 @@
 import styles from "@/styles/components/introduction.module.scss";
-import NextImage from "@/app/components/NextImage";
+import NextImage from "@/components/NextImage";
 import Image from "next/image";
 
 export default function Introduction() {

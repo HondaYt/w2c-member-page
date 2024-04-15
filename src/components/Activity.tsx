@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "@/styles/components/details.module.scss";
-import SectionTitle from "@/app/components/SectionTitle";
+import SectionTitle from "@/components/SectionTitle";
 
 export default function Activity() {
 	const isActive = true;

@@ -1,5 +1,5 @@
 import styles from "@/styles/components/contents.module.scss";
-import NextImage from "@/app/components/NextImage";
+import NextImage from "@/components/NextImage";
 
 export default function Contents() {
 	return (

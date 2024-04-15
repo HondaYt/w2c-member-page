@@ -1,5 +1,5 @@
 import styles from "@/styles/components/member.module.scss";
-import NextImage from "@/app/components/NextImage";
+import NextImage from "@/components/NextImage";
 
 type MemberProps = {
 	name: string;

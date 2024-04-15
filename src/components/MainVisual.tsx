@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, forwardRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@/styles/components/main_visual.module.scss";
-import Header from "@/app/components/Header";
+import Header from "@/components/Header";
 
 export default function MainVisual() {
 	const [headerHeight, setHeaderHeight] = useState(0);

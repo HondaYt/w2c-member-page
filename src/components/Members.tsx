@@ -1,8 +1,8 @@
 import styles from "@/styles/components/members.module.scss";
-import NextImage from "@/app/components/NextImage";
-import Member from "@/app/components/Member";
-import MembersGrade from "@/app/components/MembersGrade";
-import SectionTitle from "@/app/components/SectionTitle";
+import NextImage from "@/components/NextImage";
+import Member from "@/components/Member";
+import MembersGrade from "@/components/MembersGrade";
+import SectionTitle from "@/components/SectionTitle";
 
 const membersByGrade = {
 	2: [
@@ -50,6 +50,24 @@ const membersByGrade = {
 			hobby: "歌を聴くこと・歌うこと",
 			message: "一緒にご飯でも行きましょ",
 			image: "khirata.jpg",
+		},
+		{
+			name: "川上 采花",
+			kana: "かわかみ あやか",
+			course: "Webデザイン",
+			field: "designer",
+			hobby: "ゲーム、ゲーム実況者を見ること",
+			message: "みんな仲良しです！",
+			image: "akawakami.jpg",
+		},
+		{
+			name: "ソンスヨン",
+
+			course: "Webデザイン",
+			field: "designer",
+			hobby: "料理",
+			message: "作品を作るのは楽しいですよね!",
+			image: "sson.jpg",
 		},
 		{
 			name: "グエンドゥックフィン",

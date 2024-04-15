@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "@/styles/components/details.module.scss";
 import SectionTitle from "@/app/components/SectionTitle";
 
-export default function Details() {
+export default function Activity() {
 	const isActive = true;
 	const ActivityDays = [
 		{ day: "日" },
@@ -14,7 +14,7 @@ export default function Details() {
 		{ day: "土" },
 	];
 	return (
-		<>
+		<div className={styles.activity}>
 			<SectionTitle title="活動日時" enTitle="activity" />
 			<div className={styles.activityDays}>
 				{ActivityDays.map((day) => (
@@ -26,12 +26,14 @@ export default function Details() {
 					</div>
 				))}
 			</div>
-			<div className={styles.activityTime}>
-				{/* <div className={styles.time}>18:00〜20:00</div> */}
-				<div className={styles.pie}>
-					<span>60%</span>
+			<div className={styles.activityTimes}>
+				<div className={styles.pie} />
+				<div className={styles.text}>
+					<span>放課後</span>から<span>閉館</span>まで
+					<br />
+					活動しています！
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

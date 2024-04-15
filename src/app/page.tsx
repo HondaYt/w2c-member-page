@@ -8,7 +8,7 @@ import Introduction from "@/app/components/Introduction";
 // import SectionTitle from "@/app/components/SectionTitle";
 import Contents from "@/app/components/Contents";
 import Members from "@/app/components/Members";
-import Details from "@/app/components/Details";
+import Activity from "@/app/components/Activity";
 
 export default function App() {
 	return (
@@ -17,7 +17,7 @@ export default function App() {
 			<Introduction />
 			{/* <Contents /> */}
 			<Members />
-			<Details />
+			<Activity />
 		</main>
 	);
 }

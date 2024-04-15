@@ -4,25 +4,12 @@ import Member from "@/app/components/Member";
 import MembersGrade from "@/app/components/MembersGrade";
 import SectionTitle from "@/app/components/SectionTitle";
 
-type MemberProps = {
-	name: string;
-	kana: string;
-	course: string;
-	grade: number;
-	field: string;
-	hobby: string;
-	message: string;
-	position: string;
-	image: string;
-};
-
 const membersByGrade = {
 	2: [
 		{
 			name: "本田 有人",
 			kana: "ほんだ ゆうと",
 			course: "Webデザイン",
-			grade: 2,
 			field: "engineer",
 			hobby: "ギターを弾くこと",
 			message: "ムキムキエンジニアになりたい💪💪",
@@ -32,7 +19,6 @@ const membersByGrade = {
 			name: "岡田 未希",
 			kana: "おかだ みき",
 			course: "Webデザイン",
-			grade: 2,
 			field: "engineer",
 			hobby: "可愛いものを愛でる",
 			message: "みんなで楽しく頑張っていきましょう！",
@@ -42,7 +28,6 @@ const membersByGrade = {
 			name: "林 煜昭",
 			kana: "りん いくあき",
 			course: "Webデザイン",
-			grade: 2,
 			field: "engineer",
 			hobby: "アイドル、バイク",
 			message: "一緒にWebクリエイターを目指して頑張りましょう！！",
@@ -52,7 +37,6 @@ const membersByGrade = {
 			name: "砂原 彩花",
 			kana: "すなはら あやか",
 			course: "Webデザイン",
-			grade: 2,
 			field: "engineer",
 			hobby: "洋楽を聴くこと",
 			message: "コーディング難しいけど楽しいでーす！",
@@ -62,7 +46,6 @@ const membersByGrade = {
 			name: "平田 晃大",
 			kana: "ひらた こうだい",
 			course: "Webデザイン",
-			grade: 2,
 			field: "engineer",
 			hobby: "歌を聴くこと・歌うこと",
 			message: "一緒にご飯でも行きましょ",
@@ -71,7 +54,6 @@ const membersByGrade = {
 		{
 			name: "グエンドゥックフィン",
 			course: "Webデザイン",
-			grade: 2,
 			field: "engineer",
 			hobby: "音楽、アニメ",
 			message: "コーディング頑張りみゃす！！💪💪",
@@ -83,7 +65,6 @@ const membersByGrade = {
 			name: "大垣 陸斗",
 			kana: "おおがき りくと",
 			course: "Webデザイン",
-			grade: 3,
 			field: "engineer",
 			hobby: "おいしいご飯を食べに行く",
 			message: "みんなで楽しく頑張っていきましょう！",
@@ -94,7 +75,6 @@ const membersByGrade = {
 			name: "細田 海斗",
 			kana: "ほそだ かいと",
 			course: "Webデザイン",
-			grade: 3,
 			field: "designer",
 			hobby: "歌を聴くこと・歌うこと",
 			position: "副部長",
@@ -105,7 +85,7 @@ const membersByGrade = {
 			name: "福村 晃弘",
 			kana: "ふくむら あきひろ",
 			course: "Webデザイン",
-			grade: 3,
+
 			field: "director",
 			hobby: "おいしいご飯を食べに行く",
 			position: "副部長",
@@ -116,7 +96,6 @@ const membersByGrade = {
 			name: "松岡 優輝",
 			kana: "まつおか ゆうき",
 			course: "IT開発エキスパート",
-			grade: 3,
 			field: "engineer",
 			hobby: "ダーツ",
 			message: "一緒に作品作って成長しましょう^^*",

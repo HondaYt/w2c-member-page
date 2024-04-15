@@ -5,16 +5,15 @@ type MemberProps = {
 	name: string;
 	kana?: string;
 	course: string;
-	grade: number;
-	field: "engineer" | "designer" | "director";
+	field: string;
 	hobby: string;
 	message: string;
-	position: string;
+	position?: string;
 	image: string;
 };
 
 export default function Member(props: MemberProps) {
-	const fieldNames = {
+	const fieldNames: { [key: string]: string } = {
 		engineer: "エンジニア",
 		designer: "デザイナー",
 		director: "ディレクター",

@@ -8,12 +8,17 @@
     box-shadow: 0 2px 8px #00000020;
     transition: transform 0.5s;
 
+
     &:hover {
         transform: scale(1.02);
 
         .memberMessage {
             opacity: 1;
             transform: translateX(-50%) translateY(-20%) scale(1.2);
+        }
+
+        .position {
+            transform: translate(-25%, -25%) rotate(-10deg);
         }
     }
 
@@ -73,35 +78,39 @@
     }
 
     .field {
-        width: 100%;
-        height: 10%;
+        margin: 10px auto 0;
+        width: calc(100% - 20px);
+        height: calc(12% - 10px);
         display: flex;
         justify-content: center;
         align-items: center;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 700;
-        // border-radius: 50vh;
+        border-radius: 50vh;
+        // margin: 10px;
         // overflow-wrap: normal;
         // word-break: keep-all;
         color: #fff;
 
         &.engineer {
-            background: #17a8d6;
+            background: linear-gradient(135deg, #0085FF 0%, #17BFD6 100%);
+
+            ;
         }
 
         &.designer {
-            background: #ff6b00;
+            background: linear-gradient(135deg, #FF6B00 0%, #FFA800 100%);
         }
 
         &.director {
-            background: #59c107;
+            background: linear-gradient(135 deg, #22F137 0%, #1ECB2F 0.01%, #24FF00 100%);
         }
     }
 
     .memberParam {
         width: 100%;
-        height: 35%;
+        height: 33%;
         padding: 1rem;
         display: flex;
         flex-direction: column;
@@ -131,7 +140,7 @@
             display: flex;
             // justify-content: center;
             align-items: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
 
             h5 {
                 font-size: 1.4rem;
@@ -174,5 +183,6 @@
         font-size: 2.5rem;
         font-weight: 700;
         z-index: 1;
+        transition: transform 0.5s;
     }
 }

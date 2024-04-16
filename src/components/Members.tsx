@@ -52,11 +52,11 @@ const membersByGrade = {
 			image: "khirata.jpg",
 		},
 		{
-			name: "川上 采花",
+			name: "川上 采華",
 			kana: "かわかみ あやか",
 			course: "Webデザイン",
 			field: "designer",
-			hobby: "ゲーム、ゲーム実況者を見ること",
+			hobby: "ゲーム、ゲーム実況を見ること",
 			message: "みんな仲良しです！",
 			image: "akawakami.jpg",
 		},
@@ -75,7 +75,7 @@ const membersByGrade = {
 			field: "engineer",
 			hobby: "音楽、アニメ",
 			message: "コーディング頑張りみゃす！！💪💪",
-			image: "gnguyen.jpg",
+			image: "fnguyen.jpg",
 		},
 	],
 	3: [

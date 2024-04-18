@@ -56,6 +56,7 @@
                 height: 2rem;
                 background: #fff;
                 position: absolute;
+                border-radius: 0.4rem;
                 bottom: -0.5rem;
                 left: 50%;
                 transform: translateX(-50%) rotate(45deg);
@@ -104,7 +105,7 @@
         }
 
         &.director {
-            background: linear-gradient(135 deg, #22F137 0%, #1ECB2F 0.01%, #24FF00 100%);
+            background: linear-gradient(135deg, #22F137 0%, #24FF00 100%);
         }
     }
 

@@ -9,6 +9,7 @@ import Introduction from "@/components/Introduction";
 import Contents from "@/components/Contents";
 import Members from "@/components/Members";
 import Activity from "@/components/Activity";
+import Works from "@/components/Works";
 
 export default function App() {
 	return (
@@ -18,6 +19,7 @@ export default function App() {
 			{/* <Contents /> */}
 			<Members />
 			<Activity />
+			<Works />
 		</main>
 	);
 }

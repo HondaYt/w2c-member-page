@@ -6,16 +6,16 @@ export default function Introduction() {
 	return (
 		<div className={styles.introduction}>
 			<div className={styles.introductionText}>
-				<h2>
-					<span>W</span>eb<span>C</span>reative<span>C</span>lub
-				</h2>
 				<p>
-					<span>W2C</span>
-					は、コースの壁を超えて、これからのIT業界を担う、ものづくりに情熱を持った仲間と、つながれるサークルです。
+					<span className={styles.w2c}>
+						<span>W</span>eb<span>C</span>reative<span>C</span>lub
+					</span>
+					は、
+					コースの壁を超えて、これからのIT業界を担う、ものづくりに情熱を持った仲間とつながれるサークルです。
 				</p>
 			</div>
 			<div className={styles.introductionImage}>
-				<NextImage src="/assets/introduction.jpg" alt="" />
+				<NextImage src="/assets/introduction.jpg" alt="活動の様子" />
 			</div>
 		</div>
 	);

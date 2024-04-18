@@ -16,7 +16,7 @@ export default function Introduction({
 					<span className={styles.w2c}>
 						<span>W</span>eb<span>C</span>reative<span>C</span>lub
 					</span>
-					は、
+					は、<br />
 					コースの壁を超えて、これからのIT業界を担う、ものづくりに情熱を持った仲間とつながれるサークルです。
 				</p>
 			</div>

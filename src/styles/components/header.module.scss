@@ -80,6 +80,16 @@
             }
         }
 
+        // レスポンシブ対応
+        @media screen and (max-width:430px) {
+            h1 {
+                height: 90%;
+                position: absolute;
+                left: 1rem;
+                bottom: 1.2rem;
+            }
+        }
+
         ul {
             display: flex;
 
@@ -119,6 +129,14 @@
                         color: transparent;
                     }
                 }
+
+                // レスポンシブ対応
+                @media screen and (max-width:430px) {
+                    a {
+                        font-size: .7rem;
+                    }
+                }
+
 
                 &:hover {
                     a {

@@ -2,9 +2,15 @@ import styles from "@/styles/components/introduction.module.scss";
 import NextImage from "@/components/NextImage";
 import Image from "next/image";
 
-export default function Introduction() {
+export default function Introduction({
+	introductionRef,
+}: { introductionRef: React.RefObject<HTMLDivElement> }) {
 	return (
-		<div className={styles.introduction}>
+		<div
+			id="introduction"
+			className={styles.introduction}
+			ref={introductionRef}
+		>
 			<div className={styles.introductionText}>
 				<p>
 					<span className={styles.w2c}>

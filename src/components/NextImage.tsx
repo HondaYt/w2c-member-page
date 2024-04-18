@@ -1,4 +1,5 @@
 import Image from "next/image";
+
 import styles from "@/styles/components/next_image.module.scss";
 
 type NextImageProps = {

@@ -41,8 +41,8 @@ export default function Header(props: HeaderProps) {
 						</a>
 					</li>
 					<li>
-						<a href="#details">
-							活動詳細<span>Details</span>
+						<a href="#activity">
+							活動日時<span>Activity</span>
 						</a>
 					</li>
 					<li>

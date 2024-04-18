@@ -131,9 +131,11 @@ const membersByGrade = {
 	],
 };
 
-export default function Members() {
+export default function Members({
+	membersRef,
+}: { membersRef: React.RefObject<HTMLDivElement> }) {
 	return (
-		<>
+		<div id="members" className={styles.members} ref={membersRef}>
 			<SectionTitle title="メンバー紹介" enTitle="Members" />
 			<div className={styles.members}>
 				<MembersGrade grade={3} />
@@ -149,6 +151,6 @@ export default function Members() {
 					))}
 				</div>
 			</div>
-		</>
+		</div>
 	);
 }

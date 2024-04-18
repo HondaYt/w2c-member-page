@@ -1,6 +1,6 @@
 .introduction {
     width: 100%;
-    height: 70vh;
+    height: 80vh;
     display: flex;
 
     .introductionText {
@@ -36,6 +36,22 @@
                     }
                 }
             }
+
+            // レスポンシブ対応
+            @media screen and (max-width:430px) {
+                .w2c {
+                    font-size: 2.8rem;
+                    margin-left: .5rem;
+
+                    span {
+                        font-size: 3.2rem;
+
+                        &:first-child {
+                            margin-right: -.1rem;
+                        }
+                    }
+                }
+            }
         }
 
         p {
@@ -49,10 +65,39 @@
         }
     }
 
+    // レスポンシブ対応
+    @media screen and (max-width:430px) {
+        .introductionText {
+            height: 50%;
+            width: 100%;
+            padding-left: 4rem;
+        }
+    }
+
     .introductionImage {
         position: relative;
         width: 50%;
         height: 100%;
         clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    // レスポンシブ対応
+    @media screen and (max-width:430px) {
+        .introductionImage {
+            width: 100%;
+            height: 50%;
+            clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+        }
+    }
+
+}
+
+// レスポンシブ対応
+@media screen and (max-width:430px) {
+    .introduction {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }

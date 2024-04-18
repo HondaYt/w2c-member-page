@@ -131,23 +131,20 @@ const membersByGrade = {
 	],
 };
 
-export default function Members({
-	membersRef,
-}: { membersRef: React.RefObject<HTMLDivElement> }) {
+export default function Members() {
 	return (
-		<div id="members" className={styles.members} ref={membersRef}>
+		<div id="members" className={styles.members}>
 			<SectionTitle title="メンバー紹介" enTitle="Members" />
 			<div className={styles.members}>
 				<MembersGrade grade={3} />
 				<div className={styles.grade}>
-					{membersByGrade[3].map((member, i) => (
-						<Member key={i} {...member} />
+					{membersByGrade[3].map((member) => (
+						<Member key={member.name} {...member} />
 					))}
 				</div>
-				<MembersGrade grade={2} />
 				<div className={styles.grade}>
-					{membersByGrade[2].map((member, i) => (
-						<Member key={i} {...member} />
+					{membersByGrade[2].map((member) => (
+						<Member key={member.name} {...member} />
 					))}
 				</div>
 			</div>

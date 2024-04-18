@@ -10,6 +10,33 @@ export default function Header(props: HeaderProps) {
 	const headerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
+		const handleScroll = (event: Event) => {
+			event.preventDefault();
+			const target = event.target as HTMLAnchorElement;
+			const id = target.getAttribute("href");
+			const element = id ? document.querySelector(id) : null;
+			if (element) {
+				const yOffset = -150;
+				const y =
+					element.getBoundingClientRect().top + window.scrollY + yOffset;
+
+				window.scrollTo({ top: y, behavior: "smooth" });
+			}
+		};
+
+		const links = document.querySelectorAll("a[href^='#']");
+		for (const link of links) {
+			link.addEventListener("click", handleScroll);
+		}
+
+		return () => {
+			for (const link of links) {
+				link.removeEventListener("click", handleScroll);
+			}
+		};
+	}, []);
+
+	useEffect(() => {
 		if (headerRef.current) {
 			props.setHeaderHeight(headerRef.current.clientHeight);
 		}

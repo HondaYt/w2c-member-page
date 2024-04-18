@@ -14,12 +14,12 @@ import Activity from "@/components/Activity";
 import Works from "@/components/Works";
 
 export default function App() {
-	const mainVisualRef = useRef<HTMLDivElement>(null);
-	const introductionRef = useRef<HTMLDivElement>(null);
-	const contentsRef = useRef<HTMLDivElement>(null);
-	const membersRef = useRef<HTMLDivElement>(null);
-	const activityRef = useRef<HTMLDivElement>(null);
-	const worksRef = useRef<HTMLDivElement>(null);
+	// const mainVisualRef = useRef<HTMLDivElement>(null);
+	// const introductionRef = useRef<HTMLDivElement>(null);
+	// const contentsRef = useRef<HTMLDivElement>(null);
+	// const membersRef = useRef<HTMLDivElement>(null);
+	// const activityRef = useRef<HTMLDivElement>(null);
+	// const worksRef = useRef<HTMLDivElement>(null);
 
 	const [headerHeight, setHeaderHeight] = useState(0);
 	const [isSticky, setIsSticky] = useState(false);
@@ -37,14 +37,14 @@ export default function App() {
 
 	return (
 		<main>
-			<MainVisual mainVisualRef={mainVisualRef}>
+			<MainVisual>
 				<Header isSticky={isSticky} setHeaderHeight={setHeaderHeight} />
 			</MainVisual>
-			<Introduction introductionRef={introductionRef} />
-			<Contents contentsRef={contentsRef} />
-			<Members membersRef={membersRef} />
-			<Activity activityRef={activityRef} />
-			<Works worksRef={worksRef} />
+			<Introduction />
+			<Contents />
+			<Members />
+			<Activity />
+			<Works />
 		</main>
 	);
 }

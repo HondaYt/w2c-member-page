@@ -6,9 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "lint": "next lint"
   },
   "dependencies": {
     "biome": "^0.3.3",
@@ -19,24 +17,6 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.6.2",
-    "@chromatic-com/storybook": "^1.2.25",
-    "@storybook/addon-actions": "^8.0.4",
-    "@storybook/addon-backgrounds": "^8.0.4",
-    "@storybook/addon-controls": "^8.0.4",
-    "@storybook/addon-essentials": "^8.0.4",
-    "@storybook/addon-interactions": "^8.0.4",
-    "@storybook/addon-links": "^8.0.4",
-    "@storybook/addon-measure": "^8.0.4",
-    "@storybook/addon-onboarding": "^8.0.4",
-    "@storybook/addon-outline": "^8.0.4",
-    "@storybook/addon-toolbars": "^8.0.4",
-    "@storybook/addon-viewport": "^8.0.4",
-    "@storybook/blocks": "^8.0.4",
-    "@storybook/global": "^5.0.0",
-    "@storybook/instrumenter": "^8.0.4",
-    "@storybook/nextjs": "^8.0.4",
-    "@storybook/react": "^8.0.4",
-    "@storybook/test": "^8.0.4",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
@@ -44,7 +24,6 @@
     "polished": "^4.3.1",
     "react-confetti": "^6.1.0",
     "ress": "^5.0.2",
-    "storybook": "^8.0.4",
     "strip-ansi": "^7.1.0",
     "typescript": "^5"
   }

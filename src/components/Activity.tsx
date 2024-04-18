@@ -2,9 +2,7 @@ import Image from "next/image";
 import styles from "@/styles/components/activity.module.scss";
 import SectionTitle from "@/components/SectionTitle";
 
-export default function Activity({
-	activityRef,
-}: { activityRef: React.RefObject<HTMLDivElement> }) {
+export default function Activity() {
 	const isActive = true;
 	const ActivityDays = [
 		{ day: "日" },
@@ -16,7 +14,7 @@ export default function Activity({
 		{ day: "土" },
 	];
 	return (
-		<div id="activity" className={styles.activity} ref={activityRef}>
+		<div id="activity" className={styles.activity}>
 			<SectionTitle title="活動日時" enTitle="activity" />
 			<div className={styles.activityDays}>
 				{ActivityDays.map((day) => (

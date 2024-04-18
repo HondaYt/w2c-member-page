@@ -4,14 +4,12 @@ import Link from "next/link";
 import styles from "@/styles/components/main_visual.module.scss";
 
 export default function MainVisual({
-	mainVisualRef,
 	children,
 }: {
-	mainVisualRef: React.RefObject<HTMLDivElement>;
 	children: React.ReactNode;
 }) {
 	return (
-		<div id="mainVisual" className={styles.mainVisual} ref={mainVisualRef}>
+		<div id="mainVisual" className={styles.mainVisual}>
 			<div className={styles.mainVisualText}>
 				<h2 className={styles.mainVisualTextTitle}>
 					毎週、月火木の

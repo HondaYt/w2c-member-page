@@ -142,6 +142,7 @@ export default function Members() {
 						<Member key={member.name} {...member} />
 					))}
 				</div>
+				<MembersGrade grade={2} />
 				<div className={styles.grade}>
 					{membersByGrade[2].map((member) => (
 						<Member key={member.name} {...member} />

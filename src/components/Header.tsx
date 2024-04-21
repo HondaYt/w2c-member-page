@@ -8,6 +8,7 @@ type HeaderProps = {
 
 export default function Header(props: HeaderProps) {
 	const headerRef = useRef<HTMLDivElement>(null);
+	const [isClicked, setIsClicked] = useState(false); // クリック状態を管理するための状態
 
 	useEffect(() => {
 		const handleScroll = (event: Event) => {
@@ -36,52 +37,67 @@ export default function Header(props: HeaderProps) {
 		};
 	}, []);
 
+	const handleHamburgerClick = () => {
+		setIsClicked(!isClicked); // クリック状態を反転させる
+	};
+
 	useEffect(() => {
 		if (headerRef.current) {
 			props.setHeaderHeight(headerRef.current.clientHeight);
 		}
 	}, [props.setHeaderHeight]);
 
+	if (window.innerWidth <= 430) {
+		return null;
+	}
+
 	return (
 		<div
-			className={`${styles.navWrap} ${props.isSticky ? styles.fixed : ""}`}
+			className={`${styles.navWrap} ${props.isSticky ? styles.fixed : ""} ${
+				isClicked ? styles.isClick : ""
+			}`}
 			ref={headerRef}
 		>
 			<nav>
 				<h1>
 					<img src="/assets/logo.svg" alt="W2C" />
 				</h1>
-				<ul>
-					<li>
-						<a href="#introduction">
-							サークルについて<span>Introduction</span>
-						</a>
+				<ul className={styles.menu}>
+					<li className={styles.hamburgerMenu} onClick={handleHamburgerClick}>
+						<div className={styles.icon} />
 					</li>
-					<li>
-						<a href="#contents">
-							活動内容<span>Contents</span>
-						</a>
-					</li>
-					<li>
-						<a href="#members">
-							メンバー紹介<span>Members</span>
-						</a>
-					</li>
-					<li>
-						<a href="#activity">
-							活動日時<span>Activity</span>
-						</a>
-					</li>
-					<li>
-						<a href="#works">
-							作品紹介<span>Works</span>
-						</a>
-					</li>
-
-					<p className={styles.formLink}>
-						<a href="https://w2c-form-sable.vercel.app/">入部はこちら</a>
-					</p>
+					<ul className={styles.menuList}>
+						<li>
+							<a href="#introduction">
+								サークルについて<span>Introduction</span>
+							</a>
+						</li>
+						<li>
+							<a href="#contents">
+								活動内容<span>Contents</span>
+							</a>
+						</li>
+						<li>
+							<a href="#members">
+								メンバー紹介<span>Members</span>
+							</a>
+						</li>
+						<li>
+							<a href="#activity">
+								活動日時<span>Activity</span>
+							</a>
+						</li>
+						<li>
+							<a href="#works">
+								作品紹介<span>Works</span>
+							</a>
+						</li>
+					</ul>
 				</ul>
+
+				<p className={styles.formLink}>
+					<a href="https://w2c-form-sable.vercel.app/">入部はこちら</a>
+				</p>
 			</nav>
 		</div>
 	);

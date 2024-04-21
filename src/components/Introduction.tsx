@@ -6,11 +6,22 @@ export default function Introduction() {
 	return (
 		<div id="introduction" className={styles.introduction}>
 			<div className={styles.introductionText}>
-				<p>
+				<h3>
 					<span className={styles.w2c}>
-						<span>W</span>eb<span>C</span>reative<span>C</span>lub
+						<span>
+							<span>W</span>eb
+						</span>
+						<span>
+							<span>C</span>reative
+						</span>
+						<span>
+							<span>C</span>lub
+						</span>
 					</span>
-					は、<br />
+					は、
+					<br />
+				</h3>
+				<p>
 					コースの壁を超えて、これからのIT業界を担う、ものづくりに情熱を持った仲間とつながれるサークルです。
 				</p>
 			</div>

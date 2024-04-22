@@ -45,7 +45,7 @@ export default function Contents(props: ContentsProps) {
 		}
 	}, [props.contentsRef, props.setIsContentsBottom, props.setIsContentsTop]);
 
-	if (window.innerWidth <= 430) {
+	if (typeof window !== "undefined" && window.innerWidth <= 430) {
 		return null;
 	}
 

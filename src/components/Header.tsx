@@ -47,7 +47,7 @@ export default function Header(props: HeaderProps) {
 		}
 	}, [props.setHeaderHeight]);
 
-	if (window.innerWidth <= 430) {
+	if (typeof window !== "undefined" && window.innerWidth <= 430) {
 		return null;
 	}
 

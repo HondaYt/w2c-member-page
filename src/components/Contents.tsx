@@ -3,51 +3,40 @@ import styles from "@/styles/components/contents.module.scss";
 import NextImage from "@/components/NextImage";
 import SectionTitle from "@/components/SectionTitle";
 
-type ContentsProps = {
-	isContentsBottom: boolean;
-	setIsContentsBottom: (isContentsBottom: boolean) => void;
-	isContentsTop: boolean;
-	setIsContentsTop: (isContentsTop: boolean) => void;
-	contentsRef: React.RefObject<HTMLDivElement>;
-	isSnap: boolean;
-};
-export default function Contents(props: ContentsProps) {
-	useEffect(() => {
-		const handleScroll = () => {
-			if (!props.contentsRef.current) {
-				return;
-			}
-			const { scrollTop, scrollHeight, clientHeight } =
-				props.contentsRef.current;
-			if (scrollTop + clientHeight >= scrollHeight) {
-				props.setIsContentsBottom(true);
-			} else {
-				props.setIsContentsBottom(false);
-			}
+export default function Contents() {
+	const observerRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-			if (scrollTop === 0) {
-				// 一番上に達したかチェック
-				props.setIsContentsTop(true);
-			} else {
-				props.setIsContentsTop(false);
+	useEffect(() => {
+		// ビューポートの高さを取得
+		const observer = new IntersectionObserver(
+			(entries) => {
+				for (const entry of entries) {
+					if (entry.isIntersecting) {
+						entry.target.classList.add(styles.active);
+						entry.target.classList.remove(styles.inactive);
+					} else if (entry.target.classList.contains(styles.active)) {
+						entry.target.classList.remove(styles.active);
+						entry.target.classList.add(styles.inactive);
+					}
+				}
+			},
+			{
+				root: null,
+				rootMargin: "0px 0px -100% 0px",
+				threshold: 0.0,
+			},
+		);
+
+		for (const ref of observerRefs.current) {
+			if (ref) observer.observe(ref);
+		}
+
+		return () => {
+			for (const ref of observerRefs.current) {
+				if (ref) observer.unobserve(ref);
 			}
 		};
-
-		const contentsElement = props.contentsRef.current;
-		if (contentsElement) {
-			contentsElement.addEventListener("scroll", handleScroll);
-
-			return () => {
-				if (contentsElement) {
-					contentsElement.removeEventListener("scroll", handleScroll);
-				}
-			};
-		}
-	}, [props.contentsRef, props.setIsContentsBottom, props.setIsContentsTop]);
-
-	if (typeof window !== "undefined" && window.innerWidth <= 430) {
-		return null;
-	}
+	}, []);
 
 	const contents = [
 		{
@@ -98,23 +87,29 @@ export default function Contents(props: ContentsProps) {
 	];
 
 	return (
-		<div
-			className={`${styles.contents} ${props.isSnap ? styles.snap : ""}`}
-			ref={props.contentsRef}
-		>
-			{contents.map((content) => (
-				<div className={styles.content} key={content.title}>
-					<div className={styles.contentImage}>
-						<NextImage
-							src={`/assets/${content.imageSrc}`}
-							alt={content.imageAlt}
-						/>
-					</div>
-					<h2 className={styles.contentTitle}>{content.title}</h2>
+		<div className={styles.contents}>
+			{contents.map((content, index) => (
+				<div
+					ref={(el) => {
+						observerRefs.current[index] = el;
+					}}
+					className={styles.contentWrap}
+					key={content.title}
+					id={`content-${index}`}
+				>
+					<div className={styles.content}>
+						<div className={styles.contentImage}>
+							<NextImage
+								src={`/assets/${content.imageSrc}`}
+								alt={content.imageAlt}
+							/>
+						</div>
+						<h2 className={styles.contentTitle}>{content.title}</h2>
 
-					<div className={styles.contentText}>
-						<h3>{content.subtitle}</h3>
-						{content.text}
+						<div className={styles.contentText}>
+							<h3>{content.subtitle}</h3>
+							{content.text}
+						</div>
 					</div>
 				</div>
 			))}

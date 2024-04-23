@@ -17,12 +17,6 @@ export default function App() {
 	const [headerHeight, setHeaderHeight] = useState(0);
 	const [isSticky, setIsSticky] = useState(false);
 
-	const contentsRef = useRef<HTMLDivElement>(null);
-	const [isContentsBottom, setIsContentsBottom] = useState(false); // スクロールの状態を保持するフラグ
-	const [isContentsTop, setIsContentsTop] = useState(false); // スクロールの状態を保持するフラグ
-
-	const [isSnap, setIsSnap] = useState(false);
-
 	useEffect(() => {
 		const handleScroll = () => {
 			if (window.scrollY >= window.innerHeight - headerHeight) {
@@ -36,79 +30,13 @@ export default function App() {
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, [headerHeight]);
 
-	useEffect(() => {
-		let lastScrollY = window.scrollY; // 前回のスクロール位置を記録する変数
-
-		const handleScroll = () => {
-			const currentScrollY = window.scrollY; // 現在のスクロール位置
-
-			if (!contentsRef.current) {
-				lastScrollY = currentScrollY; // スクロール位置を更新
-				return;
-			}
-
-			const contentsTop = contentsRef.current.offsetTop;
-			const contentsHeight = contentsRef.current.offsetHeight;
-			const contentsBottom = contentsTop + contentsHeight;
-			const scrollPosition = currentScrollY + window.innerHeight;
-
-			if (currentScrollY > lastScrollY) {
-				if (!isContentsBottom) {
-					if (
-						scrollPosition >= contentsBottom &&
-						scrollPosition < contentsBottom + window.innerHeight
-					) {
-						window.scrollTo({
-							top: contentsBottom - window.innerHeight,
-							behavior: "smooth",
-						});
-						setIsSnap(true);
-					} else {
-						setIsSnap(false);
-					}
-				}
-				lastScrollY = currentScrollY; // スクロール位置を更新
-			}
-			if (currentScrollY < lastScrollY) {
-				if (!isContentsTop) {
-					if (
-						scrollPosition <= contentsBottom &&
-						scrollPosition > contentsBottom - window.innerHeight
-					) {
-						window.scrollTo({
-							top: contentsBottom - window.innerHeight,
-							behavior: "smooth",
-						});
-						setIsSnap(true);
-					} else {
-						setIsSnap(false);
-					}
-				}
-				// Contentsの底辺が画面内に入ったら、スクロールをスナップさせる
-				lastScrollY = currentScrollY; // スクロール位置を更新
-			}
-		};
-
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
-	}, [isContentsBottom, isContentsTop]); // isContentsBottom, isContentsTopを依存配列に追加
-
 	return (
 		<main className={styles.mainContainer}>
 			<MainVisual>
 				<Header isSticky={isSticky} setHeaderHeight={setHeaderHeight} />
 			</MainVisual>
 			<Introduction />
-			<Contents
-				isContentsTop={isContentsTop}
-				setIsContentsTop={setIsContentsTop}
-				isContentsBottom={isContentsBottom}
-				setIsContentsBottom={setIsContentsBottom}
-				contentsRef={contentsRef}
-				isSnap={isSnap}
-			/>
+			<Contents />
 
 			<Members />
 			<Activity />

@@ -17,7 +17,7 @@ export default function MainVisual({
 					放課後活動中！！！
 				</h2>
 				<p className={styles.mainVisualTextLink}>
-					<a href="https://w2c-form-sable.vercel.app/">入部はこちらから</a>
+					<a href="https://w2c-form.vercel.app/">入部はこちらから</a>
 				</p>
 			</div>
 			{children}

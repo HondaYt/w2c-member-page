@@ -96,7 +96,7 @@ export default function Header(props: HeaderProps) {
 				</ul>
 
 				<p className={styles.formLink}>
-					<a href="https://w2c-form-sable.vercel.app/">入部はこちら</a>
+					<a href="https://w2c-form.vercel.app/">入部はこちら</a>
 				</p>
 			</nav>
 		</div>

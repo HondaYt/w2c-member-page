@@ -112,7 +112,7 @@ export default function App() {
 
 			<Members />
 			<Activity />
-			<Works />
+			{/* <Works /> */}
 		</main>
 	);
 }

@@ -77,8 +77,8 @@ export default function Contents(props: ContentsProps) {
 					これであなたもムキムキデザイナー！！！！！
 				</p>
 			),
-			imageSrc: "teamProduction.jpg",
-			imageAlt: "teamProduction",
+			imageSrc: "design.jpg",
+			imageAlt: "design",
 		},
 		{
 			title: "TeamProject",

@@ -22,7 +22,7 @@ export default function Contents() {
 			},
 			{
 				root: null,
-				rootMargin: "0px 0px -100% 0px",
+				rootMargin: "0px 0px -80% 0px",
 				threshold: 0.0,
 			},
 		);

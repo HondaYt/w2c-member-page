@@ -12,6 +12,7 @@ import Contents from "@/components/Contents";
 import Members from "@/components/Members";
 import Activity from "@/components/Activity";
 import Works from "@/components/Works";
+import Footer from "@/components/Footer";
 
 export default function App() {
 	const [headerHeight, setHeaderHeight] = useState(0);
@@ -41,6 +42,7 @@ export default function App() {
 			<Members />
 			<Activity />
 			{/* <Works /> */}
+			<Footer />
 		</main>
 	);
 }

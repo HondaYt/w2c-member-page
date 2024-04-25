@@ -87,11 +87,11 @@ export default function Header(props: HeaderProps) {
 								活動日時<span>Activity</span>
 							</a>
 						</li>
-						<li>
+						{/* <li>
 							<a href="#works">
 								作品紹介<span>Works</span>
 							</a>
-						</li>
+						</li> */}
 					</ul>
 				</ul>
 

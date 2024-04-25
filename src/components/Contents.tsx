@@ -87,7 +87,7 @@ export default function Contents() {
 	];
 
 	return (
-		<div className={styles.contents}>
+		<div id="contents" className={styles.contents}>
 			{contents.map((content, index) => (
 				<div
 					ref={(el) => {

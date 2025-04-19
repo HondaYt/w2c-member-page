@@ -155,6 +155,15 @@ const membersByGrade = {
             message: "コーディング一緒に頑張りましょう！",
             image: "tuemori.webp",
         },
+        {
+            name: "久下 楓珠",
+            kana: "くげ ほうじゅ",
+            course: "Webデザイン",
+            field: "designer",
+            hobby: "",
+            message: "",
+            image: "unnamed.png",
+        },
     ],
     4: [
         {

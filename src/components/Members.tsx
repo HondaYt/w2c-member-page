@@ -68,7 +68,7 @@ const membersByGrade = {
             field: "designer",
             hobby: "お絵描き",
             message: "一人暮らしなのでたくさんご飯お誘いください🍻",
-            image: "unnamed.png",
+            image: "moriyasu.webp",
         },
         {
             name: "中平 隼太",

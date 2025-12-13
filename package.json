@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "biome": "^0.3.3",
-    "next": "14.1.4",
+    "next": "14.2.35",
     "react": "^18",
     "react-dom": "^18",
     "react-transition-group": "^4.4.5",
